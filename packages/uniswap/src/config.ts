@@ -114,6 +114,10 @@ const _config: Config = {
   walletConnectProjectIdDev: process.env.WALLETCONNECT_PROJECT_ID_DEV || WALLETCONNECT_PROJECT_ID_DEV,
 }
 
+console.log("process.env.REACT_APP_TRADING_API_KEY: ", process.env);
+console.log("process.env.REACT_APP_TRADING_API_KEY: ", process.env.REACT_APP_TRADING_API_KEY);
+console.log("process.env.REACT_APP_TRADING_API_KEY: ", process.env.REACT_APP_TRADING_API_KEY);
+
 export const config = Object.freeze(_config)
 
 if (isNonJestDev) {
