@@ -22,7 +22,8 @@ export const UNISWAP_WEB_URL = `https://${UNISWAP_WEB_HOSTNAME}`
 export const UNISWAP_APP_URL = 'https://uniswap.org/app'
 export const UNISWAP_MOBILE_REDIRECT_URL = 'https://uniswap.org/mobile-redirect'
 
-const helpUrl = 'https://support.uniswap.org/hc/en-us'
+// const helpUrl = 'https://support.uniswap.org/hc/en-us'
+const helpUrl = 'https://support.sunminy.org'
 
 // The trading api uses custom builds for testing which may not use the v1 prefix
 const tradingApiVersionPrefix = config.tradingApiWebTestEnv === 'true' ? '' : '/v1'

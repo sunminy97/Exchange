@@ -175,20 +175,18 @@ export function Swap({
   )
 }
 
-const SWAP_TABS = [SwapTab.Swap, SwapTab.Limit, SwapTab.Send, SwapTab.Buy]
+const SWAP_TABS = [SwapTab.Swap, SwapTab.Limit, SwapTab.Send]
 
 const TAB_TYPE_TO_LABEL = {
   [SwapTab.Swap]: (t: AppTFunction) => t('swap.form.header'),
   [SwapTab.Limit]: (t: AppTFunction) => t('swap.limit'),
-  [SwapTab.Send]: (t: AppTFunction) => t('send.title'),
-  [SwapTab.Buy]: (t: AppTFunction) => t('common.buy.label'),
+  [SwapTab.Send]: (t: AppTFunction) => t('send.title')
 }
 
 const PATHNAME_TO_TAB: { [key: string]: SwapTab } = {
   '/swap': SwapTab.Swap,
   '/send': SwapTab.Send,
-  '/limit': SwapTab.Limit,
-  '/buy': SwapTab.Buy,
+  '/limit': SwapTab.Limit
 }
 
 function UniversalSwapFlow({
@@ -290,7 +288,6 @@ function UniversalSwapFlow({
       {currentTab === SwapTab.Send && (
         <SendForm disableTokenInputs={disableTokenInputs} onCurrencyChange={onCurrencyChange} />
       )}
-      {currentTab === SwapTab.Buy && <BuyForm disabled={disableTokenInputs} initialCurrency={prefilledState?.output} />}
     </Flex>
   )
 }

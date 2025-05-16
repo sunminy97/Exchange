@@ -11,7 +11,7 @@ import { ReceiveCryptoModal } from 'components/ReceiveCryptoModal'
 import { RecoveryPhraseModal } from 'components/RecoveryPhrase/Modal'
 import { UkDisclaimerModal } from 'components/TopLevelModals/UkDisclaimerModal'
 import AddressClaimModal from 'components/claim/AddressClaimModal'
-import DevFlagsBox from 'dev/DevFlagsBox'
+// import DevFlagsBox from 'dev/DevFlagsBox'
 import { useAccount } from 'hooks/useAccount'
 import useAccountRiskCheck from 'hooks/useAccountRiskCheck'
 import { PageType, useIsPage } from 'hooks/useIsPage'
@@ -72,7 +72,7 @@ export default function TopLevelModals() {
       <PrivacyPolicyModal />
       <PrivacyChoicesModal />
       <FeatureFlagModal />
-      {shouldShowDevFlags && <DevFlagsBox />}
+      {/* {shouldShowDevFlags && <DevFlagsBox />} */}
 
       {isAddLiquidityModalOpen && <IncreaseLiquidityModal />}
       {isRemoveLiquidityModalOpen && <RemoveLiquidityModal />}

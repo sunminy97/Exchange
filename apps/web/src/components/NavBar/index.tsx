@@ -109,12 +109,12 @@ export default function Navbar() {
 
         <Right>
           {collapseSearchBar && <SearchBar maxHeight={NAV_SEARCH_MAX_HEIGHT} fullScreen={isSmallScreen} />}
-          {!isEmbeddedWalletEnabled && isLandingPage && !isSmallScreen && <NewUserCTAButton />}
+          {/* {!isEmbeddedWalletEnabled && isLandingPage && !isSmallScreen && <NewUserCTAButton />} */}
           {!account.isConnected && !account.isConnecting && <PreferenceMenu />}
           {!hideChainSelector && <ChainSelector />}
           {isTestnetModeEnabled && <TestnetModeTooltip />}
           <Web3Status />
-          {isEmbeddedWalletEnabled && !account.address && <NewUserCTAButton />}
+          {/* {isEmbeddedWalletEnabled && !account.address && <NewUserCTAButton />} */}
         </Right>
       </UnpositionedFlex>
     </Nav>

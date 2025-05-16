@@ -21,7 +21,7 @@ export function DownloadWalletRow({
   const { t } = useTranslation()
   return (
     <TouchableArea onPress={onPress}>
-      <Flex
+      {/* <Flex
         row
         justifyContent="center"
         alignItems="center"
@@ -75,7 +75,7 @@ export function DownloadWalletRow({
           </Anchor>
         )}
         <RightArrow size={iconSize} color="$neutral1" />
-      </Flex>
+      </Flex> */}
     </TouchableArea>
   )
 }

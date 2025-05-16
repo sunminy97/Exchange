@@ -74,16 +74,17 @@ export function StepRowSkeleton(props: StepRowSkeletonProps): JSX.Element {
             {title}
           </Text>
           {status === StepStatus.Active && learnMore && (
-            <Anchor
-              color="$accent1"
-              fontSize={fonts.body4.fontSize}
-              href={learnMore.url}
-              lineHeight={spacing.spacing16}
-              target="_blank"
-              textDecorationLine="none"
-            >
-              {learnMore.text}
-            </Anchor>
+            <></>
+            // <Anchor
+            //   color="$accent1"
+            //   fontSize={fonts.body4.fontSize}
+            //   href={learnMore.url}
+            //   lineHeight={spacing.spacing16}
+            //   target="_blank"
+            //   textDecorationLine="none"
+            // >
+            //   {learnMore.text}
+            // </Anchor>
           )}
         </Flex>
       </Flex>

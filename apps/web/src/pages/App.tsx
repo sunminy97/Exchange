@@ -41,7 +41,7 @@ export default function App() {
   useFeatureFlagUrlOverrides()
 
   const metaTags = useDynamicMetatags()
-  const staticTitle = findRouteByPath(pathname)?.getTitle(pathname) ?? 'Uniswap Interface'
+  const staticTitle = findRouteByPath(pathname)?.getTitle(pathname) ?? '$unM!ny Interface'
   const staticDescription = findRouteByPath(pathname)?.getDescription(pathname)
 
   // redirect address to landing pages until implemented

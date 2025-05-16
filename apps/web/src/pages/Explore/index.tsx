@@ -216,7 +216,7 @@ const Explore = ({ initialTab }: { initialTab?: ExploreTab }) => {
               )}
               <TableNetworkFilter showMultichainOption={currentKey !== ExploreTab.Transactions} />
               {currentKey === ExploreTab.Tokens && <VolumeTimeFrameSelector />}
-              {currentKey === ExploreTab.Pools && <ProtocolFilter />}
+              {/* {currentKey === ExploreTab.Pools && <ProtocolFilter />} */}
               <SearchBar tab={currentKey} />
             </Flex>
           </Flex>

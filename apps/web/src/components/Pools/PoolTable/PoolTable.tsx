@@ -363,22 +363,22 @@ export function PoolsTable({
           </Cell>
         ),
       }),
-      columnHelper.accessor((row) => row.protocolVersion, {
-        id: 'protocolVersion',
-        size: 80,
-        header: () => (
-          <HeaderCell justifyContent="flex-end">
-            <Text variant="body3" color="$neutral2">
-              {t('common.protocol')}
-            </Text>
-          </HeaderCell>
-        ),
-        cell: (protocolVersion) => (
-          <Cell justifyContent="flex-end" loading={showLoadingSkeleton}>
-            <TableText>{protocolVersion.getValue?.() ?? '-'}</TableText>
-          </Cell>
-        ),
-      }),
+      // columnHelper.accessor((row) => row.protocolVersion, {
+      //   id: 'protocolVersion',
+      //   size: 80,
+      //   header: () => (
+      //     <HeaderCell justifyContent="flex-end">
+      //       <Text variant="body3" color="$neutral2">
+      //         {t('common.protocol')}
+      //       </Text>
+      //     </HeaderCell>
+      //   ),
+      //   cell: (protocolVersion) => (
+      //     <Cell justifyContent="flex-end" loading={showLoadingSkeleton}>
+      //       <TableText>{protocolVersion.getValue?.() ?? '-'}</TableText>
+      //     </Cell>
+      //   ),
+      // }),
       columnHelper.accessor((row) => row.feeTier, {
         id: 'feeTier',
         size: 80,

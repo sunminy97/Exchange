@@ -45,16 +45,12 @@ const ExploreStatsSection = () => {
         label: t('stats.volume.1d.long'),
         value: formatPrice(totalVolume),
         change: volume24hChangePercent,
-        protocolPopoverFormattedData: [
-          { label: t('common.protocol.v4'), value: protocolVolumes.v4 },
-          { label: t('common.protocol.v3'), value: protocolVolumes.v3 },
-          { label: t('common.protocol.v2'), value: protocolVolumes.v2 },
-        ],
+        protocolPopoverFormattedData: undefined
       },
       { label: t('common.totalUniswapTVL'), value: formatPrice(totalTVL), change: totalTVL24hrChangePercent },
-      { label: t('explore.v2TVL'), value: formatPrice(protocolTVL.v2), change: protocolChangePercent.v2 },
-      { label: t('explore.v3TVL'), value: formatPrice(protocolTVL.v3), change: protocolChangePercent.v3 },
-      { label: t('explore.v4TVL'), value: formatPrice(protocolTVL.v4), change: protocolChangePercent.v4 },
+      // { label: t('explore.v2TVL'), value: formatPrice(protocolTVL.v2), change: protocolChangePercent.v2 },
+      // { label: t('explore.v3TVL'), value: formatPrice(protocolTVL.v3), change: protocolChangePercent.v3 },
+      // { label: t('explore.v4TVL'), value: formatPrice(protocolTVL.v4), change: protocolChangePercent.v4 },
     ]
 
     return stats.filter((state): state is Exclude<typeof state, null> => state !== null)
@@ -85,6 +81,7 @@ const ExploreStatsSection = () => {
           borderColor="$surface3"
           pl={index == 0 ? 0 : '$spacing24'}
           flex={1}
+          alignContent='center'
           cursor={data.protocolPopoverFormattedData ? 'pointer' : 'default'}
           transition="opacity 0.3s ease, transform 0.3s ease"
           display={media.md && index > 1 ? 'none' : 'flex'}

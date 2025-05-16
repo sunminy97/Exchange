@@ -94,9 +94,9 @@ function NetworkCostDescription({ native }: { native: Currency }) {
   return (
     <ThemedText.LabelMicro>
       <Trans i18nKey="swap.networkCost.paidIn" values={{ sym: native.symbol, chainName }} />{' '}
-      <ExternalLink href="https://support.uniswap.org/hc/en-us/articles/8370337377805-What-is-a-network-fee-">
+      {/* <ExternalLink href="https://support.uniswap.org/hc/en-us/articles/8370337377805-What-is-a-network-fee-">
         <Trans i18nKey="common.button.learn" />
-      </ExternalLink>
+      </ExternalLink> */}
     </ThemedText.LabelMicro>
   )
 }

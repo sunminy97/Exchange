@@ -52,13 +52,13 @@ export const useTabsContent = (): TabsSection[] => {
           href: '/send',
           internal: true,
         },
-        {
-          label: t('common.buy.label'),
-          icon: <CreditCardIcon fill={theme.neutral2} />,
-          quickKey: 'B',
-          href: '/buy',
-          internal: true,
-        },
+        // {
+        //   label: t('common.buy.label'),
+        //   icon: <CreditCardIcon fill={theme.neutral2} />,
+        //   quickKey: 'B',
+        //   href: '/buy',
+        //   internal: true,
+        // },
       ],
     },
     {

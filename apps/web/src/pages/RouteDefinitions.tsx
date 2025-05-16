@@ -106,9 +106,10 @@ export const routes: RouteDefinition[] = [
     path: '/',
     getTitle: () => StaticTitlesAndDescriptions.UniswapTitle,
     getDescription: () => StaticTitlesAndDescriptions.SwapDescription,
-    getElement: (args) => {
-      return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Landing />
-    },
+    getElement: () => <Navigate to="/swap" replace />
+    // getElement: (args) => {
+    //   return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Landing />
+    // },
   }),
   createRouteDefinition({
     path: '/explore',
