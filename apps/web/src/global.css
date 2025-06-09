@@ -83,3 +83,7 @@ html {
     flex-grow: 0;
   }
 }
+
+/* html.t_dark #root > span > div {
+  background: linear-gradient(rgb(49, 52, 67) 0%, rgb(23, 23, 26) 30.77%);
+} */

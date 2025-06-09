@@ -29,7 +29,7 @@ export const useTabsContent = (): TabsSection[] => {
     {
       title: t('common.trade'),
       href: '/swap',
-      isActive: pathname.startsWith('/swap') || pathname.startsWith('/limit') || pathname.startsWith('/send'),
+      isActive: pathname.startsWith('/swap') || pathname.startsWith('/limit') || pathname.startsWith('/send') || pathname.startsWith('/buy'),
       items: [
         {
           label: t('common.swap'),

@@ -62,7 +62,7 @@ export function LiquidityPositionCardLoader() {
         p="$spacing24"
         gap="$spacing24"
         borderWidth="$spacing1"
-        borderRadius="$rounded20"
+        borderRadius="$rounded4"
         borderColor="$surface3"
         width="100%"
         overflow="hidden"
@@ -147,28 +147,28 @@ function useDropdownOptions(
         }
       : undefined
 
-    if (liquidityPosition.version === ProtocolVersion.V2) {
-      const migrateV2Option = isOpenLiquidityPosition
-        ? {
-            onPress: async () => {
-              if (chainInfo.id !== account.chainId) {
-                await switchChain(chainInfo.id)
-              }
-              navigate(`/migrate/v2/${liquidityPosition.liquidityToken?.address ?? ''}`)
-            },
-            label: t('pool.migrateLiquidity'),
-            Icon: RightArrow,
-          }
-        : undefined
+    // if (liquidityPosition.version === ProtocolVersion.V2) {
+    //   const migrateV2Option = isOpenLiquidityPosition
+    //     ? {
+    //         onPress: async () => {
+    //           if (chainInfo.id !== account.chainId) {
+    //             await switchChain(chainInfo.id)
+    //           }
+    //           navigate(`/migrate/v2/${liquidityPosition.liquidityToken?.address ?? ''}`)
+    //         },
+    //         label: t('pool.migrateLiquidity'),
+    //         Icon: RightArrow,
+    //       }
+    //     : undefined
 
-      return [
-        isOpenLiquidityPosition ? addLiquidityOption : undefined, // closed v2 positions cannot re-add liquidity since the erc20 liquidity token is permanently burned when closed. whereas v3 positions can be re-opened
-        removeLiquidityOption,
-        migrateV2Option,
-        poolInfoOption,
-        hideOption,
-      ].filter((o): o is MenuOptionItem => o !== undefined)
-    }
+    //   return [
+    //     isOpenLiquidityPosition ? addLiquidityOption : undefined, // closed v2 positions cannot re-add liquidity since the erc20 liquidity token is permanently burned when closed. whereas v3 positions can be re-opened
+    //     removeLiquidityOption,
+    //     migrateV2Option,
+    //     poolInfoOption,
+    //     hideOption,
+    //   ].filter((o): o is MenuOptionItem => o !== undefined)
+    // }
 
     const collectFeesOption: MenuOptionItem | undefined = isOpenLiquidityPosition
       ? {
@@ -205,7 +205,7 @@ function useDropdownOptions(
       collectFeesOption,
       addLiquidityOption,
       removeLiquidityOption,
-      migrateV3Option,
+      // migrateV3Option,
       poolInfoOption,
       hideOption,
     ].filter((o): o is MenuOptionItem => o !== undefined)
@@ -342,7 +342,7 @@ export function LiquidityPositionCard({
           position="relative"
           gap="$spacing16"
           borderWidth="$spacing1"
-          borderRadius="$rounded20"
+          borderRadius="$rounded4"
           borderColor="$surface3"
           width="100%"
           hoverStyle={!disabled ? { borderColor: '$surface3Hovered', backgroundColor: '$surface1Hovered' } : {}}
@@ -451,7 +451,7 @@ function MiniPositionCard({
     <Flex
       gap="$gap20"
       p="$padding16"
-      borderRadius="$rounded20"
+      borderRadius="$rounded4"
       borderColor="$surface3"
       borderWidth="$spacing1"
       position="relative"
@@ -550,7 +550,7 @@ function PositionDropdownMoreMenu({ menuOptions }: { menuOptions: MenuOptionItem
         dropdownStyle={{
           p: 0,
           backgroundColor: 'transparent',
-          borderRadius: '$rounded20',
+          borderRadius: '$rounded4',
           minWidth: 'max-content',
           borderWidth: 0,
         }}

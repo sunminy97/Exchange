@@ -106,7 +106,7 @@ function _SearchModalList({
 
 function key(item: SearchModalItemTypes): string {
   if (isPoolOption(item)) {
-    return `pool-${item.chainId}-${item.poolId}-${item.protocolVersion}-${item.hookAddress}-${item.feeTier}`
+    return `pool-${item.chainId}-${item.poolId}-${item.hookAddress}-${item.feeTier}`
   }
   return `token-${item.currencyInfo.currency.chainId}-${item.currencyInfo.currencyId}`
 }

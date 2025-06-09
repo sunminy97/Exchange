@@ -53,11 +53,11 @@ export function ModalContent({
               <Text variant="body2" color="$neutral2" textAlign="center">
                 {subtext}
               </Text>
-              {learnMoreLink && (
+              {/* {learnMoreLink && (
                 <ExternalLink href={learnMoreLink}>
                   <Text variant="buttonLabel1">{t('common.button.learn')}</Text>
                 </ExternalLink>
-              )}
+              )} */}
             </Flex>
           </Flex>
           {children}

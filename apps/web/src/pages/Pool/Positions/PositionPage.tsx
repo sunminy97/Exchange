@@ -450,7 +450,7 @@ function PositionPage() {
                   alignItems="center"
                   py="$spacing20"
                   backgroundColor="$surface2"
-                  borderRadius="$rounded20"
+                  borderRadius="$rounded4"
                 >
                   {'result' in metadata ? (
                     <PositionNFT image={metadata.result.image} height={400} />

@@ -84,7 +84,7 @@ function EmptyPositionsView({ chainId, isConnected }: { chainId?: UniverseChainI
         row
         alignItems="center"
         justifyContent="space-between"
-        borderRadius="$rounded20"
+        borderRadius="$rounded4"
         borderColor="$surface3"
         borderWidth="$spacing1"
         borderStyle="solid"
@@ -150,7 +150,7 @@ function LearnMoreTile({ img, text, link }: { img: string; text: string; link?: 
       <Flex
         row
         width={344}
-        borderRadius="$rounded20"
+        borderRadius="$rounded4"
         borderColor="$surface3"
         borderWidth="$spacing1"
         borderStyle="solid"
@@ -281,12 +281,10 @@ export default function Pool() {
         $xl={{ flexDirection: 'column', gap: '$gap16' }}
         width="100%"
         gap={20}
-        py="$spacing24"
-        px="$spacing40"
         $lg={{ px: '$spacing20' }}
       >
-        <Flex grow shrink gap="$spacing24" maxWidth={700} $xl={{ maxWidth: '100%' }}>
-          {isLPIncentivesEnabled && (
+        <Flex grow shrink gap="$spacing24" $xl={{ maxWidth: '100%' }}>
+          {/* {isLPIncentivesEnabled && (
             <LpIncentiveRewardsCard
               walletAddress={account.address}
               onCollectRewards={() => {
@@ -296,7 +294,7 @@ export default function Pool() {
               setTokenRewards={setTokenRewards}
               initialHasCollectedRewards={hasCollectedRewards}
             />
-          )}
+          )} */}
           <Flex row justifyContent="space-between" alignItems="center" mt={isLPIncentivesEnabled ? '$spacing28' : 0}>
             <PositionsHeader
               showFilters={account.isConnected}
@@ -386,7 +384,7 @@ export default function Pool() {
               <CloseIconWithHover onClose={() => setClosedCTADismissed(true)} size="$icon.20" />
             </Flex>
           )}
-          <Flex row centered $sm={{ flexDirection: 'column', alignItems: 'flex-start' }} mb="$spacing24" gap="$gap4">
+          {/* <Flex row centered $sm={{ flexDirection: 'column', alignItems: 'flex-start' }} mb="$spacing24" gap="$gap4">
             <Text variant="body3" color="$neutral2">
               {t('pool.import.link.description')}
             </Text>
@@ -395,9 +393,9 @@ export default function Pool() {
                 {t('pool.import.positions.v2')}
               </Text>
             </Anchor>
-          </Flex>
+          </Flex> */}
         </Flex>
-        <Flex gap="$gap32">
+        {/* <Flex gap="$gap32">
           <TopPools chainId={chainFilter} />
           <Flex gap="$gap20" mb="$spacing24">
             <Text variant="subheading1">{t('liquidity.learnMoreLabel')}</Text>
@@ -413,7 +411,7 @@ export default function Pool() {
               {t('common.button.learn')}
             </ExternalArrowLink>
           </Flex>
-        </Flex>
+        </Flex> */}
       </Flex>
       {isLPIncentivesEnabled && (
         <LpIncentiveClaimModal

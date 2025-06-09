@@ -95,11 +95,11 @@ export default function SettingsMenu({
             onClick={openLanguageSettings}
             testId="language-settings-button"
           />
-          <SettingsButton
+          {/* <SettingsButton
             title={t('settings.setting.smallBalances.title')}
             onClick={openPortfolioBalanceSettings}
             testId="portfolio-balance-settings-button"
-          />
+          /> */}
           {connectedWithEmbeddedWallet && (
             <SettingsButton
               title={t('settings.setting.passKey.title')}
@@ -116,7 +116,7 @@ export default function SettingsMenu({
           )}
         </Flex>
         <TestnetsToggle />
-        <AnalyticsToggle />
+        {/* <AnalyticsToggle /> */}
       </Container>
     </SlideOutMenu>
   )

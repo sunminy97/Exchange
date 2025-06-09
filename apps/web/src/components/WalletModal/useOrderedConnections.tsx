@@ -152,7 +152,7 @@ export function useOrderedConnections(options?: { showSecondaryConnectors?: bool
       // If embedded wallet is enabled, add it to the top of the list
       // Else we don't care about the primary/secondary split so show mobile connectors
       if (isEmbeddedWalletEnabled) {
-        orderedConnectors.push(embeddedWalletConnector)
+        // orderedConnectors.push(embeddedWalletConnector)
         // If used recently, still add mobile wallets to primary
         if (recentConnectorId === CONNECTION_PROVIDER_IDS.COINBASE_SDK_CONNECTOR_ID) {
           orderedConnectors.push(coinbaseSdkConnector)

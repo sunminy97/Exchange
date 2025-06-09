@@ -54,9 +54,9 @@ function _PoolOptionItem({
       }
       badge={
         <Flex row gap="$spacing2" alignItems="center">
-          <Badge size="small" placement="start">
+          {/* <Badge size="small" placement="start">
             {protocolVersion.toLowerCase()}
-          </Badge>
+          </Badge> */}
           {hookAddress && (
             <Badge size="small" placement="middle">
               {shortenAddress(hookAddress, 4)}

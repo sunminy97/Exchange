@@ -32,7 +32,7 @@ const Switch = styled(Row)`
   width: auto;
   padding: 4px;
   border: 1px solid ${({ theme }) => theme.surface3};
-  border-radius: 16px;
+  border-radius: 4px;
 `
 
 const NUMBER_WITH_MAX_TWO_DECIMAL_PLACES = /^(?:\d*\.\d{0,2}|\d+)$/

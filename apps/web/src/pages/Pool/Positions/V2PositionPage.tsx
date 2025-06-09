@@ -162,7 +162,7 @@ function V2PositionPage() {
           )}
           {isOwner && (
             <Flex row gap="$gap12" alignItems="center" maxWidth="100%" flexWrap="wrap">
-              <Button
+              {/* <Button
                 size="small"
                 emphasis="secondary"
                 $sm={{ width: '100%' }}
@@ -179,7 +179,7 @@ function V2PositionPage() {
                 }}
               >
                 {t('common.migrate.v3')}
-              </Button>
+              </Button> */}
               <Button
                 size="small"
                 emphasis="secondary"

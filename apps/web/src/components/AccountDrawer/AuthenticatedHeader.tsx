@@ -215,7 +215,7 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
         ) : (
           <>
             <Row gap="8px">
-              {shouldShowBuyFiatButton && (
+              {/* {shouldShowBuyFiatButton && (
                 <ActionTile
                   dataTestId={TestID.WalletBuyCrypto}
                   Icon={<Bank size={24} color="$accent1" />}
@@ -224,7 +224,7 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
                   errorMessage={t('common.restricted.region')}
                   errorTooltip={t('moonpay.restricted.region')}
                 />
-              )}
+              )} */}
               <ActionTile
                 dataTestId={TestID.WalletReceiveCrypto}
                 Icon={<ArrowDownCircleFilled size={24} color="$accent1" />}

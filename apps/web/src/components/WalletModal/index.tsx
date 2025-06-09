@@ -4,7 +4,7 @@ import { Page, downloadAppModalPageAtom } from 'components/NavBar/DownloadApp/Mo
 import ConnectionErrorView from 'components/WalletModal/ConnectionErrorView'
 import { DownloadWalletRow } from 'components/WalletModal/DownloadWalletRow'
 import { AlternativeOption, Option } from 'components/WalletModal/Option'
-import PrivacyPolicyNotice from 'components/WalletModal/PrivacyPolicyNotice'
+// import PrivacyPolicyNotice from 'components/WalletModal/PrivacyPolicyNotice'
 import { UniswapWalletOptions } from 'components/WalletModal/UniswapWalletOptions'
 import { useOrderedConnections } from 'components/WalletModal/useOrderedConnections'
 import { useRecentConnectorId } from 'components/Web3Provider/constants'
@@ -131,7 +131,7 @@ export default function WalletModal() {
         </Flex>
         <Flex gap="$gap8">
           <Flex px="$spacing4">
-            <PrivacyPolicyNotice />
+            {/* <PrivacyPolicyNotice /> */}
           </Flex>
           {showMoonpayText && (
             <Flex borderTopWidth={1} pt="$spacing8" borderColor="$surface3" px="$spacing4">

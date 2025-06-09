@@ -140,10 +140,10 @@ export function LiquidityPositionInfo({
               </Text>
             )}
           </Flex>
-          <Flex row gap={2} alignItems="center">
+          {/* <Flex row gap={2} alignItems="center">
             <LiquidityPositionInfoBadges size="small" versionLabel={versionLabel} v4hook={v4hook} feeTier={feeTier} />
-          </Flex>
-          {isMigrateToV4ButtonVisible && migrateToV4Button()}
+          </Flex> */}
+          {/* {isMigrateToV4ButtonVisible && migrateToV4Button()} */}
         </Flex>
 
         {!isMiniVersion && (

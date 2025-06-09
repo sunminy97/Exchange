@@ -35,7 +35,7 @@ const SwapDetailsWrapper = styled(Column)`
 `
 
 const Wrapper = styled(Column)`
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 12px 16px;
 `
 

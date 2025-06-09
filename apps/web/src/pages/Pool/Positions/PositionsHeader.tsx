@@ -132,26 +132,28 @@ export function PositionsHeader({
         <Flex gap="$spacing1" row>
           <Flex
             row
+            height="100%" 
             gap="$gap8"
             px="$padding16"
+            paddingRight="$padding10"
+            paddingLeft="$padding10"
             backgroundColor="$neutral1"
-            borderTopLeftRadius="$rounded16"
-            borderBottomLeftRadius="$rounded16"
+            borderRadius="$rounded16"
             alignItems="center"
             $sm={{ justifyContent: 'center' }}
             justifyContent="flex-start"
             flexGrow={1}
             {...ClickableTamaguiStyle}
             onPress={() => {
-              navigate('/positions/create/v4')
+              navigate('/positions/create/v3')
             }}
           >
             <Plus size={20} color="$surface1" />
-            <Text color="$surface1" variant="buttonLabel3">
+            <Text padding="5px" color="$surface1" variant="buttonLabel3">
               {t('common.new')}
             </Text>
           </Flex>
-          <DropdownSelector
+          {/* <DropdownSelector
             containerStyle={{ width: 'auto' }}
             menuLabel={
               <Flex
@@ -179,7 +181,7 @@ export function PositionsHeader({
             alignRight={media.sm}
           >
             {createOptions}
-          </DropdownSelector>
+          </DropdownSelector> */}
         </Flex>
         {showFilters && (
           <Flex row alignItems="center" shrink height="100%" gap="$gap4">
@@ -194,7 +196,7 @@ export function PositionsHeader({
             >
               {statusFilterOptions}
             </DropdownSelector>
-            <DropdownSelector
+            {/* <DropdownSelector
               isOpen={statusDropdownOpen}
               toggleOpen={() => setStatusDropdownOpen((prev) => !prev)}
               menuLabel={<Text variant="buttonLabel3">{t('common.protocol')}</Text>}
@@ -202,7 +204,7 @@ export function PositionsHeader({
               buttonStyle={StyledDropdownButton}
             >
               {versionFilterOptions}
-            </DropdownSelector>
+            </DropdownSelector> */}
             <Flex
               alignItems="center"
               justifyContent="center"

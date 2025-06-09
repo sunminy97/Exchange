@@ -3,8 +3,8 @@
 import { colorsDark, colorsLight } from 'ui/src/theme'
 
 export const colors = {
-  white: '#FFFFFF',
-  black: '#000000',
+  white: '#242c2c',
+  black: 'linear-gradient(rgb(49, 52, 67) 0%, rgb(23, 23, 26) 31.77%)',
   gray50: '#F5F6FC',
   gray100: '#E8ECFB',
   gray150: '#D2D9EE',

@@ -1,11 +1,24 @@
+import { hover } from '@testing-library/user-event/dist/types/convenience'
+import { ArrowChangeDown } from 'components/Icons/ArrowChangeDown'
 import { NavDropdown, NavDropdownTabWrapper } from 'components/NavBar/NavDropdown/index'
 import { TabsItem, TabsSection, useTabsContent } from 'components/NavBar/Tabs/TabsContent'
+import { color } from 'd3'
 import { useKeyDown } from 'hooks/useKeyPress'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { Flex, Popover, Text, styled } from 'ui/src'
 import { FeatureFlags } from 'uniswap/src/features/gating/flags'
 import { useFeatureFlag } from 'uniswap/src/features/gating/hooks'
+
+const ArrowDownWrapper = styled(Text, {
+  color: '$neutral2',
+  '$group-hover': { color: '$neutral1' },
+  variants: {
+    open: {
+      true: { color: '$neutral1' },
+    },
+  },
+})
 
 const TabText = styled(Text, {
   justifyContent: 'center',
@@ -54,10 +67,10 @@ function Item({ icon, label, quickKey, path, closeMenu }: TItemProps) {
         borderRadius="$rounded12"
         backgroundColor="$surface2"
         height="$spacing48"
-        hoverStyle={{ backgroundColor: '$surface2Hovered' }}
+        hoverStyle={{backgroundColor: '$surface2Hovered'}}
       >
-        {icon}
-        <Text variant="buttonLabel2" width="100%" color="$neutral2">
+        {/* {icon} */}
+        <Text variant="buttonLabel2" width="100%" color="$neutral2" hoverStyle={{color: '$accent1'}}>
           {label}
         </Text>
         {navHotkeysEnabled && (
@@ -134,6 +147,9 @@ const Tab = ({
   return (
     <Popover ref={popoverRef} placement="bottom" hoverable stayInFrame allowFlip onOpenChange={setIsOpen}>
       <Popover.Trigger data-testid={`${label}-tab`}>{Label}</Popover.Trigger>
+        <ArrowDownWrapper open={isOpen}>
+          <ArrowChangeDown style={{marginLeft: "-14px"}} width="12px" height="12px" />
+        </ArrowDownWrapper>
       <NavDropdown isOpen={isOpen} dataTestId={`${label}-menu`}>
         <NavDropdownTabWrapper>
           {items.map((item, index) => (

@@ -70,7 +70,7 @@ const accentColors = {
 
 export const colors = {
   white: '#FFFFFF',
-  black: '#000000',
+  black: '#222222',
   scrim: 'rgba(0,0,0,0.60)',
 
   ...accentColors,
@@ -225,10 +225,10 @@ const sporeDark = {
   neutral3: 'rgba(255, 255, 255, 0.38)',
   neutral3Hovered: 'rgba(255, 255, 255, 0.58)',
 
-  surface1: '#131313',
-  surface1Hovered: '#1A1A1A',
-  surface2: '#1F1F1F',
-  surface2Hovered: '#242424',
+  surface1: 'rgb(49, 52, 67)',
+  surface1Hovered: '#262936',
+  surface2: '#262936',
+  surface2Hovered: '#262930',
   surface3: 'rgba(255,255,255,0.12)',
   surface3Solid: '#393939',
   surface3Hovered: 'rgba(255,255,255,0.16)',

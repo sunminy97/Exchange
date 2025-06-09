@@ -111,7 +111,7 @@ function pickThemeButtonTextColor({ theme, emphasis }: { theme: DefaultTheme; em
 const BaseThemeButton = styled.button<BaseThemeButtonProps>`
   align-items: center;
   background-color: ${pickThemeButtonBackgroundColor};
-  border-radius: 16px;
+  border-radius: 4px;
   border: 0;
   color: ${pickThemeButtonTextColor};
   cursor: pointer;

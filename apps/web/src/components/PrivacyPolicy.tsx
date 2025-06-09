@@ -153,7 +153,7 @@ function PrivacyPolicy() {
           ))}
           <ThemedText.DeprecatedBody fontSize={12}>
             <Row justify="center" marginBottom="1rem">
-              <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
+              <ExternalLink href="http://support.Anarkoswap.org/en/articles/5675203-terms-of-service-faq">
                 {t('common.button.learn')}
               </ExternalLink>
             </Row>

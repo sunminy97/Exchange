@@ -8,7 +8,7 @@ import { ClickableStyle } from 'theme/components/styles'
 import { Text } from 'ui/src'
 
 const Container = styled.button`
-  border-radius: 16px;
+  border-radius: 4px;
   border: none;
   background: ${({ theme }) => theme.surface2};
   padding: 12px 16px;

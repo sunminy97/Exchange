@@ -65,7 +65,7 @@ export function NavDropdown({ children, width, dropdownRef, isOpen, padded, data
         ]}
         data-testid={dataTestId}
       >
-        <Popover.Arrow />
+        <Popover.Arrow backgroundColor="transparent"/>
         <NavDropdownContent
           data-testid={dataTestId}
           ref={dropdownRef}

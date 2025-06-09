@@ -180,13 +180,15 @@ const SWAP_TABS = [SwapTab.Swap, SwapTab.Limit, SwapTab.Send]
 const TAB_TYPE_TO_LABEL = {
   [SwapTab.Swap]: (t: AppTFunction) => t('swap.form.header'),
   [SwapTab.Limit]: (t: AppTFunction) => t('swap.limit'),
-  [SwapTab.Send]: (t: AppTFunction) => t('send.title')
+  [SwapTab.Send]: (t: AppTFunction) => t('send.title'),
+  // [SwapTab.Buy]: (t: AppTFunction) => t('common.buy.label')
 }
 
 const PATHNAME_TO_TAB: { [key: string]: SwapTab } = {
   '/swap': SwapTab.Swap,
   '/send': SwapTab.Send,
-  '/limit': SwapTab.Limit
+  '/limit': SwapTab.Limit,
+  // '/buy': SwapTab.Buy
 }
 
 function UniversalSwapFlow({
@@ -243,6 +245,7 @@ function UniversalSwapFlow({
       display: (
         <Text
           variant="buttonLabel3"
+          fontSize={"24px"}
           hoverStyle={{ color: '$neutral1' }}
           color={currentTab === tab ? '$neutral1' : '$neutral2'}
           tag="h1"
@@ -271,7 +274,7 @@ function UniversalSwapFlow({
         <Flex gap="$spacing16">
           <SwapDependenciesContextProvider swapCallback={swapCallback} wrapCallback={wrapCallback}>
             <SwapFlow
-              settings={[Slippage, DeadlineOverride, ProtocolPreference]}
+              settings={[Slippage, DeadlineOverride]}
               hideHeader={hideHeader}
               hideFooter={hideFooter}
               onClose={noop}
@@ -288,6 +291,7 @@ function UniversalSwapFlow({
       {currentTab === SwapTab.Send && (
         <SendForm disableTokenInputs={disableTokenInputs} onCurrencyChange={onCurrencyChange} />
       )}
+      {/* {currentTab === SwapTab.Buy && <BuyForm disabled={disableTokenInputs} initialCurrency={prefilledState?.output} />} */}
     </Flex>
   )
 }

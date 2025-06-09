@@ -63,7 +63,7 @@ const SkeletonSuggestionRow = styled.div`
 const CollectionImageStyles = css`
   width: 36px;
   height: 36px;
-  border-radius: 9999px;
+  border-radius: 4px;
   background: ${({ theme }) => theme.surface3};
   flex-shrink: 0;
 `

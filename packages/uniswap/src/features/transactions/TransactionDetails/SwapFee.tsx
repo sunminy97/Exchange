@@ -44,14 +44,14 @@ export function SwapFee({
 
   return (
     <Flex row alignItems="center" justifyContent="space-between">
-      <SwapFeeWarning noFee={Boolean(swapFeeInfo?.noFeeCharged)}>
+      {/* <SwapFeeWarning noFee={Boolean(swapFeeInfo?.noFeeCharged)}> */}
         <Flex centered row gap="$spacing4">
           <Text color="$neutral2" variant="body3">
             {t('swap.details.uniswapFee')}
             {showFeePercentage && ` (${swapFeeInfo.formattedPercent})`}
           </Text>
         </Flex>
-      </SwapFeeWarning>
+      {/* </SwapFeeWarning> */}
       <IndicativeLoadingWrapper loading={loading}>
         {swapFeeInfo && (
           <Flex row alignItems="center" gap="$spacing8">

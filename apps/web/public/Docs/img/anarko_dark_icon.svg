@@ -1,0 +1,17 @@
+<!-- AnarkoSwap logo: simple, modern, attractive -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="AnarkoSwap logo">
+  <defs>
+    <!-- Vibrant gradient for a modern DeFi feel -->
+    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1abc9c"/>
+      <stop offset="100%" stop-color="#9b59b6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stylized "A" symbol -->
+  <path d="M50 160 L100 40 L150 160 L130 160 L100 90 L70 160 Z" fill="url(#grad1)"/>
+
+  <!-- Swap arrow cross‑bar -->
+  <line x1="70" y1="110" x2="125" y2="110" stroke="url(#grad1)" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="125,110 113,102 113,118" fill="url(#grad1)"/>
+</svg>

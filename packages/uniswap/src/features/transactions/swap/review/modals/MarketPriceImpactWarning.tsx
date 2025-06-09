@@ -45,11 +45,12 @@ export function MarketPriceImpactWarning({
   return (
     <WarningInfo
       infoButton={
-        <TouchableArea onPress={async () => await openUri(link)}>
-          <Text color="$accent1" variant={isWeb ? 'body4' : 'buttonLabel2'}>
-            {t('common.button.learn')}
-          </Text>
-        </TouchableArea>
+        // <TouchableArea onPress={async () => await openUri(link)}>
+        //   <Text color="$accent1" variant={isWeb ? 'body4' : 'buttonLabel2'}>
+        //     {t('common.button.learn')}
+        //   </Text>
+        // </TouchableArea>
+        <></>
       }
       modalProps={{
         hideIcon: isWeb,

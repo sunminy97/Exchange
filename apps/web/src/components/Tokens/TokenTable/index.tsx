@@ -106,7 +106,8 @@ export const HEADER_DESCRIPTIONS: Record<TokenSortMethod, ReactNode | undefined>
   [TokenSortMethod.DAY_CHANGE]: undefined,
   [TokenSortMethod.HOUR_CHANGE]: undefined,
   [TokenSortMethod.FULLY_DILUTED_VALUATION]: <Trans i18nKey="stats.fdv.description" />,
-  [TokenSortMethod.VOLUME]: <Trans i18nKey="stats.volume.description" />,
+  // [TokenSortMethod.VOLUME]: <Trans i18nKey="stats.volume.description" />,
+  [TokenSortMethod.VOLUME]: undefined,
 }
 
 function TokenTableHeader({

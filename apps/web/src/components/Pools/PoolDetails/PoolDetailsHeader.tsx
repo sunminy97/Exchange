@@ -154,9 +154,9 @@ const PoolDetailsTitle = ({
         </PoolName>
       </Flex>
       <Flex row gap="$gap4" alignItems="center">
-        <PoolDetailsBadge variant="body3" $position="left">
+        {/* <PoolDetailsBadge variant="body3" $position="left">
           {protocolVersion?.toLowerCase()}
-        </PoolDetailsBadge>
+        </PoolDetailsBadge> */}
         {hookAddress && (
           <ExternalLink href={getExplorerLink(chainId ?? defaultChainId, hookAddress, ExplorerDataType.ADDRESS)}>
             <PoolDetailsBadge variant="body3" {...ClickableTamaguiStyle}>

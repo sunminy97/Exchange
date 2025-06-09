@@ -20,7 +20,7 @@ const LoadingWrapper = styled.div`
 
   padding: 8px;
   border: ${({ theme }) => `1px solid ${theme.surface3}`};
-  border-radius: 16px;
+  border-radius: 4px;
   background-color: ${({ theme }) => theme.surface1};
 `
 
@@ -50,7 +50,7 @@ const InputColumn = styled.div`
   display: flex;
   flex-flow: column;
   background-color: ${({ theme }) => theme.surface2};
-  border-radius: 16px;
+  border-radius: 4px;
   display: flex;
   gap: 30px;
   padding: 48px 12px;

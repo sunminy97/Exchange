@@ -50,8 +50,8 @@ const Wrapper = styled(Flex, {
 const CurrencyInputWrapper = styled(Flex, {
   backgroundColor: '$surface2',
   px: '$spacing16',
-  borderBottomRightRadius: '$rounded16',
-  borderBottomLeftRadius: '$rounded16',
+  borderBottomRightRadius: '$rounded20',
+  borderBottomLeftRadius: '$rounded20',
   height: '64px',
   justifyContent: 'center',
   position: 'relative',
@@ -66,8 +66,8 @@ const InputWrapper = styled(Flex, {
   alignItems: 'center',
   justifyContent: 'flex-end',
   gap: '$gap4',
-  borderTopLeftRadius: '$rounded16',
-  borderTopRightRadius: '$rounded16',
+  borderTopLeftRadius: '$rounded20',
+  borderTopRightRadius: '$rounded20',
 })
 
 const ErrorContainer = styled(Flex, {

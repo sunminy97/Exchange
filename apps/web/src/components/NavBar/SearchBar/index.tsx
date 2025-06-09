@@ -73,7 +73,7 @@ const KeyShortcut = styled.div`
   padding: 0px 8px;
   width: 20px;
   height: 20px;
-  border-radius: 4px;
+  border-radius: 16px;
   font-size: 12px;
   font-weight: 535;
   line-height: 16px;
@@ -108,7 +108,7 @@ const SearchInput = styled(Row)<{ $isOpen: boolean; $fullScreen: boolean }>`
   max-width: ${NAV_SEARCH_MAX_WIDTH};
   width: 100vw;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 16px;
   height: 40px;
   justify-content: center;
   align-items: center;
@@ -134,7 +134,7 @@ const SearchBarDropdownContainer = styled.div<{ $isOpen: boolean; $fullScreen: b
   grid-area: dropdown;
   background-color: ${({ theme }) => theme.surface1};
   border: 1px solid ${({ theme }) => theme.surface3};
-  border-radius: 20px;
+  border-radius: 16px;
   max-height: 100%;
   overflow-y: auto;
   ${({ $isOpen }) => $isOpen && OpenSearchDropdown}

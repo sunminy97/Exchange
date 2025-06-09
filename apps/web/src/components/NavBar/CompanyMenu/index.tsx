@@ -54,22 +54,22 @@ export function CompanyMenu() {
           $platform-web={{ containerType: 'normal' }}
         >
           <Flex row alignItems="center" gap="$gap4" onPress={handleLogoClick} data-testid={TestID.NavUniswapLogo}>
-            <NavIcon />
+            {/* <NavIcon /> */}
             {isLargeScreen && (
               <Text variant="subheading1" color="$accent1" userSelect="none">
                 $unM!ny
               </Text>
             )}
           </Flex>
-          {/* {(media.md || isTouchDevice) && <Hamburger size={22} color="$neutral2" cursor="pointer" ml="16px" />}
+          {(media.md || isTouchDevice) && <Hamburger size={22} color="$neutral2" cursor="pointer" ml="16px" />}
           {!media.md && !isTouchDevice && (
             <ArrowDownWrapper open={isOpen}>
               <ArrowChangeDown width="12px" height="12px" />
             </ArrowDownWrapper>
-          )} */}
+          )}
         </Flex>
       </Popover.Trigger>
-      {/* {isMobileDrawer ? <MobileMenuDrawer isOpen={isOpen} closeMenu={closeMenu} /> : <MenuDropdown close={closeMenu} />} */}
+      {isMobileDrawer ? <MobileMenuDrawer isOpen={isOpen} closeMenu={closeMenu} /> : <MenuDropdown close={closeMenu} />}
     </Popover>
   )
 }

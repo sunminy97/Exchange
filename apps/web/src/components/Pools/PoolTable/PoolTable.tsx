@@ -158,7 +158,7 @@ function PoolTableHeader({
     [PoolSortFields.Volume30D]: t('pool.volume.thirtyDay.short'),
     [PoolSortFields.Apr]: t('pool.aprText'),
     [PoolSortFields.VolOverTvl]: t('pool.volOverTvl'),
-    [PoolSortFields.RewardApr]: 'Reward APR',
+    // [PoolSortFields.RewardApr]: 'Reward APR',
   }
 
   return (
@@ -300,7 +300,7 @@ export function PoolsTable({
           volume30d: isGqlPool ? pool.volume30d : giveExploreStatDefaultValue(pool.volume30Day?.value),
           volOverTvl: pool.volOverTvl,
           apr: pool.apr,
-          rewardApr: pool.boostedApr,
+          // rewardApr: pool.boostedApr,
           link: `/explore/pools/${getChainUrlParam(chainId ?? defaultChainId)}/${isGqlPool ? pool.hash : pool.id}`,
           token0CurrencyId: currency0Id,
           token1CurrencyId: currency1Id,
@@ -435,39 +435,39 @@ export function PoolsTable({
             ),
           })
         : null,
-      !hiddenColumns?.includes(PoolSortFields.RewardApr) && isLPIncentivesEnabled
-        ? columnHelper.accessor((row) => row.rewardApr, {
-            id: PoolSortFields.RewardApr,
-            size: 130,
-            header: () => (
-              <HeaderCell>
-                <PoolTableHeader
-                  category={PoolSortFields.RewardApr}
-                  isCurrentSortMethod={sortMethod === PoolSortFields.RewardApr}
-                  direction={orderDirection}
-                />
-              </HeaderCell>
-            ),
-            sortingFn: 'basic',
-            cell: ({ row }) => {
-              if (!row?.original) {
-                return null
-              }
+      // !hiddenColumns?.includes(PoolSortFields.RewardApr) && isLPIncentivesEnabled
+      //   ? columnHelper.accessor((row) => row.rewardApr, {
+      //       id: PoolSortFields.RewardApr,
+      //       size: 130,
+      //       header: () => (
+      //         <HeaderCell>
+      //           <PoolTableHeader
+      //             category={PoolSortFields.RewardApr}
+      //             isCurrentSortMethod={sortMethod === PoolSortFields.RewardApr}
+      //             direction={orderDirection}
+      //           />
+      //         </HeaderCell>
+      //       ),
+      //       sortingFn: 'basic',
+      //       cell: ({ row }) => {
+      //         if (!row?.original) {
+      //           return null
+      //         }
 
-              const { apr, token0CurrencyId, token1CurrencyId, rewardApr } = row.original
+      //         const { apr, token0CurrencyId, token1CurrencyId, rewardApr } = row.original
 
-              return (
-                <RewardAprCell
-                  apr={apr}
-                  rewardApr={rewardApr}
-                  token0CurrencyId={token0CurrencyId}
-                  token1CurrencyId={token1CurrencyId}
-                  isLoading={showLoadingSkeleton}
-                />
-              )
-            },
-          })
-        : null,
+      //         return (
+      //           <RewardAprCell
+      //             apr={apr}
+      //             rewardApr={rewardApr}
+      //             token0CurrencyId={token0CurrencyId}
+      //             token1CurrencyId={token1CurrencyId}
+      //             isLoading={showLoadingSkeleton}
+      //           />
+      //         )
+      //       },
+      //     })
+      //   : null,
       !hiddenColumns?.includes(PoolSortFields.Volume24h)
         ? columnHelper.accessor((row) => row.volume24h, {
             id: 'volume24h',

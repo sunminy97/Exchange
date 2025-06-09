@@ -88,11 +88,11 @@ export function LaunchModal({
                   {t('common.button.dismiss')}
                 </Button>
               </Trace>
-              <Trace logPress element={InterfaceElementName.LEARN_MORE_LINK}>
+              {/* <Trace logPress element={InterfaceElementName.LEARN_MORE_LINK}>
                 <Button variant="branded" size="xxsmall" fill flexBasis={0} onPress={() => openUri(learnMoreUrl)}>
                   {t('common.button.learn')}
                 </Button>
-              </Trace>
+              </Trace> */}
             </Flex>
           </Flex>
         </Flex>

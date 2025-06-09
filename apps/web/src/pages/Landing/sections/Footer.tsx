@@ -33,18 +33,18 @@ const PolicyLink = styled(Text, {
 export function Socials({ iconSize }: { iconSize?: string }) {
   return (
     <Flex row gap="$spacing24" maxHeight={iconSize} alignItems="flex-start">
-      <SocialIcon $hoverColor="#00C32B">
-        <Anchor href="https://github.com/Uniswap" target="_blank">
+      {/* <SocialIcon $hoverColor="#00C32B">
+        <Anchor href="https://github.com/sunminyXXXgithubUrl" target="_blank">
           <Github size={iconSize} fill="inherit" />
         </Anchor>
-      </SocialIcon>
+      </SocialIcon> */}
       <SocialIcon $hoverColor="#20BAFF">
-        <Anchor href="https://x.com/Uniswap" target="_blank">
+        <Anchor href="https://x.com/sunminyXXXtwiterUrl" target="_blank">
           <Twitter size={iconSize} fill="inherit" />
         </Anchor>
       </SocialIcon>
       <SocialIcon $hoverColor="#5F51FF">
-        <Anchor href="https://discord.com/invite/uniswap" target="_blank">
+        <Anchor href="https://discord.com/invite/sunminyXXXdiscordUrl" target="_blank">
           <Discord size={iconSize} fill="inherit" />
         </Anchor>
       </SocialIcon>

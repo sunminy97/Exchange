@@ -152,30 +152,30 @@ export const routes: RouteDefinition[] = [
       </Suspense>
     ),
   }),
-  createRouteDefinition({
-    path: '/vote/*',
-    getTitle: () => i18n.t('title.voteOnGov'),
-    getDescription: () => i18n.t('title.uniToken'),
-    getElement: () => {
-      return (
-        <Routes>
-          <Route
-            path="*"
-            Component={() => {
-              window.location.href = 'https://vote.uniswapfoundation.org'
-              return null
-            }}
-          ></Route>
-        </Routes>
-      )
-    },
-  }),
-  createRouteDefinition({
-    path: '/create-proposal',
-    getTitle: () => i18n.t('title.createGovernanceOn'),
-    getDescription: () => i18n.t('title.createGovernanceTo'),
-    getElement: () => <Navigate to="/vote/create-proposal" replace />,
-  }),
+  // createRouteDefinition({
+  //   path: '/vote/*',
+  //   getTitle: () => i18n.t('title.voteOnGov'),
+  //   getDescription: () => i18n.t('title.uniToken'),
+  //   getElement: () => {
+  //     return (
+  //       <Routes>
+  //         <Route
+  //           path="*"
+  //           Component={() => {
+  //             window.location.href = 'https://vote.uniswapfoundation.org'
+  //             return null
+  //           }}
+  //         ></Route>
+  //       </Routes>
+  //     )
+  //   },
+  // }),
+  // createRouteDefinition({
+  //   path: '/create-proposal',
+  //   getTitle: () => i18n.t('title.createGovernanceOn'),
+  //   getDescription: () => i18n.t('title.createGovernanceTo'),
+  //   getElement: () => <Navigate to="/vote/create-proposal" replace />,
+  // }),
   createRouteDefinition({
     path: '/buy',
     getElement: () => <Swap />,
@@ -220,12 +220,12 @@ export const routes: RouteDefinition[] = [
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),
-  createRouteDefinition({
-    path: '/positions/v2/:chainName/:pairAddress',
-    getElement: () => <V2PositionPage />,
-    getTitle: getPositionPageTitle,
-    getDescription: getPositionPageDescription,
-  }),
+  // createRouteDefinition({
+  //   path: '/positions/v2/:chainName/:pairAddress',
+  //   getElement: () => <V2PositionPage />,
+  //   getTitle: getPositionPageTitle,
+  //   getDescription: getPositionPageDescription,
+  // }),
   createRouteDefinition({
     path: '/positions/v3/:chainName/:tokenId',
     getElement: () => <PositionPage />,
@@ -251,30 +251,30 @@ export const routes: RouteDefinition[] = [
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),
-  createRouteDefinition({
-    path: '/pool/v2/find',
-    getElement: () => <PoolFinderRedirects />,
-    getTitle: getPositionPageDescription,
-    getDescription: getPositionPageDescription,
-  }),
-  createRouteDefinition({
-    path: '/pool/v2',
-    getElement: () => <LegacyPositionPageRedirects />,
-    getTitle: getPositionPageTitle,
-    getDescription: getPositionPageDescription,
-  }),
+  // createRouteDefinition({
+  //   path: '/pool/v2/find',
+  //   getElement: () => <PoolFinderRedirects />,
+  //   getTitle: getPositionPageDescription,
+  //   getDescription: getPositionPageDescription,
+  // }),
+  // createRouteDefinition({
+  //   path: '/pool/v2',
+  //   getElement: () => <LegacyPositionPageRedirects />,
+  //   getTitle: getPositionPageTitle,
+  //   getDescription: getPositionPageDescription,
+  // }),
   createRouteDefinition({
     path: '/pool/:tokenId',
     getElement: () => <LegacyPositionPageRedirects />,
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),
-  createRouteDefinition({
-    path: '/pools/v2/find',
-    getElement: () => <PoolFinderRedirects />,
-    getTitle: getPositionPageTitle,
-    getDescription: getPositionPageDescription,
-  }),
+  // createRouteDefinition({
+  //   path: '/pools/v2/find',
+  //   getElement: () => <PoolFinderRedirects />,
+  //   getTitle: getPositionPageTitle,
+  //   getDescription: getPositionPageDescription,
+  // }),
   createRouteDefinition({
     path: '/pools',
     getElement: () => <LegacyPoolRedirects />,
@@ -287,13 +287,13 @@ export const routes: RouteDefinition[] = [
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),
-  createRouteDefinition({
-    path: '/add/v2',
-    nestedPaths: [':currencyIdA', ':currencyIdA/:currencyIdB'],
-    getElement: () => <AddLiquidityV2WithTokenRedirects />,
-    getTitle: getAddLiquidityPageTitle,
-    getDescription: () => StaticTitlesAndDescriptions.AddLiquidityDescription,
-  }),
+  // createRouteDefinition({
+  //   path: '/add/v2',
+  //   nestedPaths: [':currencyIdA', ':currencyIdA/:currencyIdB'],
+  //   getElement: () => <AddLiquidityV2WithTokenRedirects />,
+  //   getTitle: getAddLiquidityPageTitle,
+  //   getDescription: () => StaticTitlesAndDescriptions.AddLiquidityDescription,
+  // }),
   createRouteDefinition({
     path: '/add',
     nestedPaths: [
@@ -306,30 +306,30 @@ export const routes: RouteDefinition[] = [
     getTitle: getAddLiquidityPageTitle,
     getDescription: () => StaticTitlesAndDescriptions.AddLiquidityDescription,
   }),
-  createRouteDefinition({
-    path: '/remove/v2/:currencyIdA/:currencyIdB',
-    getElement: () => <RemoveLiquidityV2WithTokenRedirects />,
-    getTitle: () => i18n.t('title.removeLiquidityv2'),
-    getDescription: () => i18n.t('title.removeTokensv2'),
-  }),
+  // createRouteDefinition({
+  //   path: '/remove/v2/:currencyIdA/:currencyIdB',
+  //   getElement: () => <RemoveLiquidityV2WithTokenRedirects />,
+  //   getTitle: () => i18n.t('title.removeLiquidityv2'),
+  //   getDescription: () => i18n.t('title.removeTokensv2'),
+  // }),
   createRouteDefinition({
     path: '/remove/:tokenId',
     getElement: () => <LegacyPositionPageRedirects />,
     getTitle: () => i18n.t('title.removePoolLiquidity'),
     getDescription: () => i18n.t('title.removev3Liquidity'),
   }),
-  createRouteDefinition({
-    path: '/migrate/v2',
-    getElement: () => <MigrateV2 />,
-    getTitle: () => StaticTitlesAndDescriptions.MigrateTitle,
-    getDescription: () => StaticTitlesAndDescriptions.MigrateDescription,
-  }),
-  createRouteDefinition({
-    path: '/migrate/v2/:address',
-    getElement: () => <MigrateV2Pair />,
-    getTitle: () => StaticTitlesAndDescriptions.MigrateTitle,
-    getDescription: () => StaticTitlesAndDescriptions.MigrateDescription,
-  }),
+  // createRouteDefinition({
+  //   path: '/migrate/v2',
+  //   getElement: () => <MigrateV2 />,
+  //   getTitle: () => StaticTitlesAndDescriptions.MigrateTitle,
+  //   getDescription: () => StaticTitlesAndDescriptions.MigrateDescription,
+  // }),
+  // createRouteDefinition({
+  //   path: '/migrate/v2/:address',
+  //   getElement: () => <MigrateV2Pair />,
+  //   getTitle: () => StaticTitlesAndDescriptions.MigrateTitle,
+  //   getDescription: () => StaticTitlesAndDescriptions.MigrateDescription,
+  // }),
   createRouteDefinition({
     path: EXTENSION_PASSKEY_AUTH_PATH,
     getElement: () => <ExtensionPasskeySignInPopUp />,

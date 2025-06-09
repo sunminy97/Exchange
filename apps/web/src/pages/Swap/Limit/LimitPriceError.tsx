@@ -12,7 +12,7 @@ import { FadePresence, FadePresenceAnimationType } from 'theme/components/FadePr
 const Container = styled(Row)`
   padding: 12px;
   border: 1px solid ${({ theme }) => theme.surface3};
-  border-radius: 16px;
+  border-radius: 4px;
   margin-top: 4px;
 `
 

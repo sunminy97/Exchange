@@ -55,7 +55,7 @@ const WiggleIcon = styled(Wiggle)`
 const IllustrationContainer = styled.div`
   display: flex;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 4px;
   border: ${({ theme }) => `1px solid ${theme.neutral3}`};
   overflow: hidden;
 `

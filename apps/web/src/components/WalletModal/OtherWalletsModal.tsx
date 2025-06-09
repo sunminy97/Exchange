@@ -54,9 +54,9 @@ export function OtherWalletsModal() {
             data-testid="option-grid"
           >
             {/* If uniswap mobile was the last used connector it will be show on the primary window */}
-            {recentConnectorId !== CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID && (
+            {/* {recentConnectorId !== CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID && (
               <Option connectorId={CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID} />
-            )}
+            )} */}
             {connectors.map((c) => (
               <Option connectorId={c.id} key={c.uid} detected={c.isInjected} />
             ))}

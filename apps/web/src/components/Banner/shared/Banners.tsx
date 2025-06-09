@@ -57,9 +57,9 @@ export function Banners() {
     )
   }
 
-  if (isLPIncentivesEnabled) {
-    return <LPIncentiveAnnouncementBanner />
-  }
+  // if (isLPIncentivesEnabled) {
+  //   return <LPIncentiveAnnouncementBanner />
+  // }
 
   return null
 }

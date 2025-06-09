@@ -39,7 +39,7 @@ const StyledCloseIcon = styled(X)`
 const RecipientWrapper = styled(Column)<{ $disabled?: boolean }>`
   position: relative;
   background-color: ${({ theme }) => theme.surface2};
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 12px 16px;
   gap: 4px;
   opacity: ${({ $disabled }) => (!$disabled ? 1 : 0.4)};
@@ -90,7 +90,7 @@ const MenuFlyout = styled(AutoColumn)`
     0px 4px 8px rgba(0, 0, 0, 0.04),
     0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.01);
-  border-radius: 12px;
+  border-radius: 20px
   position: absolute;
   top: 76px;
   left: 4px;

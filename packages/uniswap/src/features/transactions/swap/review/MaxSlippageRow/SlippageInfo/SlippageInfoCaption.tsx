@@ -73,11 +73,11 @@ export function SlippageInfoCaption({
         {tradeType === TradeType.EXACT_INPUT
           ? t('swap.settings.slippage.input.message')
           : t('swap.settings.slippage.output.message')}{' '}
-        {isWeb && (
+        {/* {isWeb && (
           <Flex display="inline-flex">
             <LearnMoreLink url={uniswapUrls.helpArticleUrls.swapSlippage} textVariant="body4" textColor="white" />
           </Flex>
-        )}
+        )} */}
       </Text>
 
       {showSlippageWarning && isWeb && <SlippageWarningText />}

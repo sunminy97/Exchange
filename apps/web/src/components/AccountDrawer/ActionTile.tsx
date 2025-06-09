@@ -35,7 +35,7 @@ const Tile = styled(ThemeButton)`
   padding: 12px;
 
   border-color: transparent;
-  border-radius: 16px;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   transition: background-color 150ms ease;

@@ -44,15 +44,15 @@ export function NetworkFee({
 
   return (
     <Flex row alignItems="center" gap="$spacing12" justifyContent="space-between">
-      <NetworkFeeWarning
+      {/* <NetworkFeeWarning
         gasFeeHighRelativeToValue={gasFeeHighRelativeToValue}
         uniswapXGasFeeInfo={uniswapXGasFeeInfo}
         chainId={chainId}
-      >
+      > */}
         <Text color="$neutral2" flexShrink={1} numberOfLines={3} variant="body3">
           {t('transaction.networkCost.label')}
         </Text>
-      </NetworkFeeWarning>
+      {/* </NetworkFeeWarning> */}
       <IndicativeLoadingWrapper loading={indicative || (!gasFee.value && gasFee.isLoading)}>
         <Flex row alignItems="center" gap={uniswapXGasBreakdown ? '$spacing4' : '$spacing8'}>
           {(!uniswapXGasBreakdown || gasFee.error) && (

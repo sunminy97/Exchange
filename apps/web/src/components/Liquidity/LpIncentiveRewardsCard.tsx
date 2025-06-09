@@ -161,7 +161,7 @@ function LpIncentiveRewardsCard({
         backgroundColor="$surface2"
         borderWidth={1}
         borderColor="$surface3"
-        borderRadius="$rounded20"
+        borderRadius="$rounded4"
         overflow="hidden"
         transition="all 0.2s ease-out"
         $group-hover={shadowPropsMedium['$platform-web'] as FlexProps}

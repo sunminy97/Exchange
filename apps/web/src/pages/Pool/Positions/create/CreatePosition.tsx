@@ -271,7 +271,7 @@ const Toolbar = ({ defaultInitialToken }: { defaultInitialToken: Currency }) => 
 
       <ToolbarContainer>
         <ResetButton onClickReset={() => setShowResetModal(true)} isDisabled={isFormUnchanged} />
-        <DropdownSelector
+        {/* <DropdownSelector
           containerStyle={{ width: 'auto' }}
           buttonStyle={{ py: '$spacing8', px: '$spacing12' }}
           dropdownStyle={{ width: 200, borderRadius: '$rounded16' }}
@@ -285,7 +285,7 @@ const Toolbar = ({ defaultInitialToken }: { defaultInitialToken: Currency }) => 
           alignRight
         >
           {versionOptions}
-        </DropdownSelector>
+        </DropdownSelector> */}
         <Flex
           borderRadius="$rounded12"
           borderWidth="$spacing1"
@@ -315,7 +315,7 @@ export default function CreatePosition() {
 
   // URL format is `/positions/create/:protocolVersion`, with possible searchParams `?currencyA=...&currencyB=...&chain=...`
   const { protocolVersion } = useParams<{ protocolVersion: string }>()
-  const paramsProtocolVersion = parseProtocolVersion(protocolVersion)
+  const paramsProtocolVersion = parseProtocolVersion('v3')
 
   const initialInputs = useInitialPoolInputs()
   const initialProtocolVersion = paramsProtocolVersion ?? ProtocolVersion.V4

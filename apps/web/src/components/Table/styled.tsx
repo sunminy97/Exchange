@@ -39,7 +39,7 @@ export const TableHead = (props: PropsWithChildren<{ $isSticky: boolean; $top: n
     className="scrollbar-hidden"
     $platform-web={props.$isSticky ? { position: 'sticky' } : {}}
   >
-    {props.$isSticky && <Flex height={12} />}
+    {props.$isSticky && <Flex display='none' height={12} />}
     {props.children}
   </Flex>
 )

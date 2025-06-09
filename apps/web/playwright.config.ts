@@ -25,10 +25,10 @@ export default defineConfig({
     screenshot: 'off',
     video: 'retain-on-failure',
     trace: 'retain-on-failure',
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://app.sunminyswap.org:3000',
     headless: true,
     extraHTTPHeaders: {
-      origin: 'http://localhost:3000',
+      origin: 'http://app.sunminyswap.org:3000',
     },
   },
   projects: [

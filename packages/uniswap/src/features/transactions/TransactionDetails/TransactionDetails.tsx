@@ -82,8 +82,8 @@ export function TransactionDetails({
   isBridgeTrade,
   AccountDetails,
   estimatedBridgingTime,
-  RoutingInfo,
-  RateInfo,
+  // RoutingInfo,
+  // RateInfo,
 }: PropsWithChildren<TransactionDetailsProps>): JSX.Element {
   const { t } = useTranslation()
   const [showChildren, setShowChildren] = useState(showExpandedChildren)
@@ -122,7 +122,7 @@ export function TransactionDetails({
       ) : null}
       <Flex gap="$spacing16" pb="$spacing8">
         <Flex gap="$spacing8" px="$spacing8">
-          {RateInfo}
+          {/* {RateInfo} */}
           {feeOnTransferProps && <FeeOnTransferFeeGroup {...feeOnTransferProps} />}
           {isSwap && isBridgeTrade && <EstimatedTime visibleIfLong={true} timeMs={estimatedBridgingTime} />}
           {isSwap && outputCurrency && (
@@ -135,7 +135,7 @@ export function TransactionDetails({
             transactionUSDValue={transactionUSDValue}
             uniswapXGasBreakdown={uniswapXGasBreakdown}
           />
-          {isSwap && RoutingInfo}
+          {/* {isSwap && RoutingInfo} */}
           {AccountDetails}
           {showChildren ? (
             <AnimatePresence>

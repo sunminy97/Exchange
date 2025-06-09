@@ -114,8 +114,8 @@ export function LiquidityPositionFeeStats({
       gap="$gap20"
       py="$spacing16"
       px="$spacing24"
-      borderBottomLeftRadius="$rounded20"
-      borderBottomRightRadius="$rounded20"
+      borderBottomLeftRadius="$rounded4"
+      borderBottomRightRadius="$rounded4"
       backgroundColor={cardHovered ? '$surface2Hovered' : '$surface2'}
     >
       <Flex row gap="$gap20" grow $sm={{ row: false }}>
@@ -136,11 +136,11 @@ export function LiquidityPositionFeeStats({
                 <Text variant="body2" color="$neutral2">
                   {t('common.unavailable')}
                 </Text>
-                <MouseoverTooltip text={t('fee.unavailable')} placement="auto">
+                {/* <MouseoverTooltip text={t('fee.unavailable')} placement="auto">
                   <Flex justifyContent="center">
                     <InfoCircleFilled color="$neutral2" size="$icon.16" />
                   </Flex>
-                </MouseoverTooltip>
+                </MouseoverTooltip> */}
               </Flex>
             ) : (
               <PrimaryText>{earningsOrFees}</PrimaryText>

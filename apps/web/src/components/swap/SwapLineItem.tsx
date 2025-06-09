@@ -67,7 +67,7 @@ function BaseTooltipContent({ children, url }: { children: ReactNode; url: strin
 
 export function FOTTooltipContent() {
   return (
-    <BaseTooltipContent url="https://support.uniswap.org/hc/en-us/articles/18673568523789-What-is-a-token-fee-">
+    <BaseTooltipContent url="http://support.Anarkoswap.org/hc/en-us/articles/18673568523789-What-is-a-token-fee-">
       <Trans i18nKey="swap.tokenOwnFees" />
     </BaseTooltipContent>
   )
@@ -76,7 +76,7 @@ export function FOTTooltipContent() {
 function SwapFeeTooltipContent({ hasFee }: { hasFee: boolean }) {
   const message = hasFee ? <Trans i18nKey="swap.fees.experience" /> : <Trans i18nKey="swap.fees.noFee" />
   return (
-    <BaseTooltipContent url="https://support.uniswap.org/hc/en-us/articles/20131678274957">
+    <BaseTooltipContent url="http://support.Anarkoswap.org/hc/en-us/articles/20131678274957">
       {message}
     </BaseTooltipContent>
   )
@@ -84,7 +84,7 @@ function SwapFeeTooltipContent({ hasFee }: { hasFee: boolean }) {
 
 export function SlippageTooltipContent() {
   return (
-    <BaseTooltipContent url="https://support.uniswap.org/hc/en-us/articles/20131678274957">
+    <BaseTooltipContent url="https://support.Anarkoswap.org/hc/en-us/articles/20131678274957">
       <Trans i18nKey="swap.slippage.tooltip" />
     </BaseTooltipContent>
   )
@@ -95,7 +95,7 @@ function MinimumOutputTooltipContent({ amount }: { amount: CurrencyAmount<Curren
   const formattedAmount = formatCurrencyAmount({ amount, type: NumberType.SwapDetailsAmount })
 
   return (
-    <BaseTooltipContent url="https://support.uniswap.org/hc/en-us/articles/8643794102669-Price-Impact-vs-Price-Slippage">
+    <BaseTooltipContent url="https://support.Anarkoswap.org/hc/en-us/articles/8643794102669-Price-Impact-vs-Price-Slippage">
       <Trans i18nKey="swap.minPriceSlip.revert" values={{ amount: `${formattedAmount} ${amount.currency.symbol}` }} />
     </BaseTooltipContent>
   )
@@ -156,7 +156,7 @@ function useLineItem(props: SwapLineItemProps): LineItemData | undefined {
       return {
         Label: () => (isLimitTrade(trade) ? <Trans i18nKey="limits.price.label" /> : <Trans i18nKey="common.rate" />),
         Value: () => <TradePrice price={trade.executionPrice} />,
-        TooltipBody: !isPreview ? () => <RoutingTooltip trade={trade} /> : undefined,
+        // TooltipBody: !isPreview ? () => <RoutingTooltip trade={trade} /> : undefined,
         tooltipSize: isUniswapX ? TooltipSize.Small : TooltipSize.Large,
       }
     case SwapLineItemType.NETWORK_COST:
@@ -165,7 +165,7 @@ function useLineItem(props: SwapLineItemProps): LineItemData | undefined {
       }
       return {
         Label: () => <Trans i18nKey="common.networkCost" />,
-        TooltipBody: () => <GasBreakdownTooltip trade={trade} />,
+        // TooltipBody: () => <GasBreakdownTooltip trade={trade} />,
         Value: () => {
           if (isPreview) {
             return <Loading />
@@ -180,13 +180,13 @@ function useLineItem(props: SwapLineItemProps): LineItemData | undefined {
       }
       return {
         Label: () => <Trans i18nKey="swap.priceImpact" />,
-        TooltipBody: () => <Trans i18nKey="swap.impactOfTrade" />,
+        // TooltipBody: () => <Trans i18nKey="swap.impactOfTrade" />,
         Value: () => (isPreview ? <Loading /> : <ColoredPercentRow percent={priceImpact} />),
       }
     case SwapLineItemType.MAX_SLIPPAGE:
       return {
         Label: () => <Trans i18nKey="settings.maxSlippage" />,
-        TooltipBody: () => <SlippageTooltipContent />,
+        // TooltipBody: () => <SlippageTooltipContent />,
         Value: () => (
           <Row gap="8px">
             {isAutoSlippage && <AutoBadge>{t(`common.automatic`)}</AutoBadge>} {formatPercent(allowedSlippage)}
@@ -203,7 +203,7 @@ function useLineItem(props: SwapLineItemProps): LineItemData | undefined {
             <Trans i18nKey="common.fee" /> {trade.swapFee && `(${formatPercent(trade.swapFee.percent)})`}
           </>
         ),
-        TooltipBody: () => <SwapFeeTooltipContent hasFee={Boolean(trade.swapFee)} />,
+        // TooltipBody: () => <SwapFeeTooltipContent hasFee={Boolean(trade.swapFee)} />,
         Value: () => <FeeRow trade={trade} />,
       }
     }
@@ -213,16 +213,16 @@ function useLineItem(props: SwapLineItemProps): LineItemData | undefined {
       }
       return {
         Label: () => <Trans i18nKey="swap.payAtMost" />,
-        TooltipBody: () => <Trans i18nKey="swap.maxPriceSlip.revert" />,
+        // TooltipBody: () => <Trans i18nKey="swap.maxPriceSlip.revert" />,
         Value: () => <CurrencyAmountRow amount={trade.maximumAmountIn(allowedSlippage ?? new Percent(0))} />,
         loaderWidth: 70,
       }
     case SwapLineItemType.MINIMUM_OUTPUT:
       return {
         Label: () => <Trans i18nKey="swap.receive.atLeast" />,
-        TooltipBody: () => (
-          <MinimumOutputTooltipContent amount={trade.minimumAmountOut(allowedSlippage ?? new Percent(0))} />
-        ),
+        // TooltipBody: () => (
+        //   <MinimumOutputTooltipContent amount={trade.minimumAmountOut(allowedSlippage ?? new Percent(0))} />
+        // ),
         Value: () => <CurrencyAmountRow amount={trade.minimumAmountOut(allowedSlippage ?? new Percent(0))} />,
         loaderWidth: 70,
       }
@@ -232,12 +232,12 @@ function useLineItem(props: SwapLineItemProps): LineItemData | undefined {
       }
       return {
         Label: () => <Trans i18nKey="swap.orderRouting" />,
-        TooltipBody: () => {
-          if (isUniswapX) {
-            return <UniswapXDescription />
-          }
-          return <SwapRoute data-testid="swap-route-info" trade={trade} />
-        },
+        // TooltipBody: () => {
+        //   if (isUniswapX) {
+        //     return <UniswapXDescription />
+        //   }
+        //   return <SwapRoute data-testid="swap-route-info" trade={trade} />
+        // },
         tooltipSize: isUniswapX ? TooltipSize.Small : TooltipSize.Large,
         Value: () => <RouterLabel trade={trade} />,
       }

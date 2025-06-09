@@ -11,7 +11,7 @@ import { ModalName } from 'uniswap/src/features/telemetry/constants'
 
 export const Container = styled(ColumnCenter)`
   background-color: ${({ theme }) => theme.surface1};
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 16px 24px 24px 24px;
   width: 100%;
 `

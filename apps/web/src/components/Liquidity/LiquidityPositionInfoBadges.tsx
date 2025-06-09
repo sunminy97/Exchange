@@ -69,7 +69,7 @@ export function LiquidityPositionInfoBadges({
 
   const badges = useMemo(() => {
     return [
-      versionLabel ? { label: versionLabel } : undefined,
+      // versionLabel ? { label: versionLabel } : undefined,
       v4hook && v4hook !== ZERO_ADDRESS
         ? { label: v4hook, copyable: true, icon: <DocumentList color="$neutral2" size={16} /> }
         : undefined,

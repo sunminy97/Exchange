@@ -414,14 +414,17 @@ function LimitForm({ onCurrencyChange }: LimitFormProps) {
             <Trans
               i18nKey="limits.form.disclaimer.uniswapx"
               components={{
-                link: (
-                  <Anchor textDecorationLine="none" href={uniswapUrls.helpArticleUrls.limitsFailure} target="_blank">
-                    <LearnMore>
-                      <Trans i18nKey="common.button.learn" />
-                    </LearnMore>
-                  </Anchor>
-                ),
+                link: <></>
               }}
+              // components={{
+              //   link: (
+              //     <Anchor textDecorationLine="none" href={uniswapUrls.helpArticleUrls.limitsFailure} target="_blank">
+              //       <LearnMore>
+              //         <Trans i18nKey="common.button.learn" />
+              //       </LearnMore>
+              //     </Anchor>
+              //   ),
+              // }}
             />
           )}
         </Text>
